@@ -9,6 +9,7 @@ class Voiture:
         print("Marque:", self.marque)
         print("Couleur:", self.couleur)
 
+
 class Parc:
     def __init__(self, ID, adresse, capacite):
         self.ID = ID
@@ -16,3 +17,16 @@ class Parc:
         self.capacite = capacite
         self.listeVoiture = []
 
+    def entrerVoiture(self, voiture):
+
+        if len(self.listeVoitures) >= self.capacite:
+            print("Parc est plein")
+            return
+
+        for n in self.listeVoitures:
+            if n.matricule == voiture.matricule:
+                print("Voiture est deja dans le parc")
+                return
+
+        self.listeVoitures.append(voiture)
+        print("Voiture est ajoutée au parc")
