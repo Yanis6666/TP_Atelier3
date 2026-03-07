@@ -41,3 +41,5 @@ class Parc:
 
     def calculerNbrPlacesLibres(self):
         return self.capacite - len(self.listeVoitures)
+
+parc = Parc(123, "Toronto", 3)
