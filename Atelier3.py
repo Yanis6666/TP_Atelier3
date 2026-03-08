@@ -50,3 +50,5 @@ v3 = Voiture("CT444", "BMW", "Vert")
 parc.entrerVoiture(v1)
 parc.entrerVoiture(v2)
 parc.entrerVoiture(v3)
+
+parc.sortirVoiture(v2)
