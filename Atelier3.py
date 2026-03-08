@@ -15,17 +15,16 @@ class Parc:
         self.ID = ID
         self.adresse = adresse
         self.capacite = capacite
-        self.listeVoiture = []
+        self.listeVoitures = []
 
     def entrerVoiture(self, voiture):
-
         if len(self.listeVoitures) >= self.capacite:
-            print("Parc est plein")
+            print("Parc plein")
             return
 
-        for n in self.listeVoitures:
-            if n.matricule == voiture.matricule:
-                print("Voiture est deja dans le parc")
+        for v in self.listeVoitures:
+             if v.matricule == voiture.matricule:
+                print("Voiture deja dans le parc")
                 return
 
         self.listeVoitures.append(voiture)
@@ -47,3 +46,7 @@ parc = Parc(123, "Toronto", 3)
 v1 = Voiture("AB254", "Toyota", "Noir")
 v2 = Voiture("ZK457", "Honda", "Blanc")
 v3 = Voiture("CT444", "BMW", "Vert")
+
+parc.entrerVoiture(v1)
+parc.entrerVoiture(v2)
+parc.entrerVoiture(v3)
